@@ -1,0 +1,13 @@
+
+services:
+  storage-service:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://node1.local:27017/chunkDatabase
+    volumes:
+      - /data/chunks_storage:/data/chunks_storage
+
+volumes:
+  chunks_storage:

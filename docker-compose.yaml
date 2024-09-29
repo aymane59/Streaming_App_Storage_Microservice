@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGODB_URI=mongodb://node1.local:27017/chunkDatabase
+      - MONGODB_URI=mongodb://172.20.10.5:27017/chunkDatabase
     volumes:
       - /data/chunks_storage:/data/chunks_storage
 

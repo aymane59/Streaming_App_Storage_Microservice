@@ -2,7 +2,7 @@
 const { storeChunk, getChunkMetadata } = require('../services/chunkService');
 
 const uploadChunk = async (req, res) => {
-    const { videoId, videoTitle, chunkNumber, fogNode } = req.body;
+    const { zone, videoId, videoTitle, streamer, chunkNumber, fogNode } = req.body;
     const chunkData = req.file.buffer; // Assurez-vous que le fichier chunk est uploadé correctement
 
     try {
